@@ -19,9 +19,23 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    // Path aliases to match Vite config
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@models/*": ["src/models/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
+      "@features/*": ["src/features/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@config/*": ["src/config/*"],
+      "@ui/*": ["src/ui/*"]
+    },
+    // Creative Tip: Enable custom types for global utilities
+    "types": ["vite/client", "node"]
   },
   "include": ["src"]
 }
